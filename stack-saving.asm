@@ -23,6 +23,7 @@
 	increaseMyRegesiter:
 		# "sp" stands for stack pointer
 		addi $sp, $sp, -4
+			# 0() 's 0 is offset
 		sw   $s0, 0($sp)  # save it to the stack to store old val
 		
 		addi $s0, $s0, 30 # add val to the regesiter

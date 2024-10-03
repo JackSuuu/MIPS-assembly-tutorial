@@ -20,4 +20,4 @@
 	addNumbers:
 		add $v1, $a1, $a2
 		
-		jr $ra
+		jr $ra # jr for return values in procedure
