@@ -1,24 +1,9 @@
 .data 
-	myArray: .space 12
+	myArray: .word 100, 40, 5  # init array of
+	# myArray: .word 100:3 -> means 3 elements of 100
 	newLine: .asciiz "\n"
 .text
 	main:
-	addi $s0, $zero, 4
-	addi $s1, $zero, 10
-	addi $s2, $zero, 12
-	
-	# Index = $t0
-	addi $t0, $zero, 0
-	
-	sw $s0, myArray($t0)
-		addi $t0, $t0, 4 # increment the index
-	sw $s1, myArray($t0) 
-		addi $t0, $t0, 4
-	sw $s2, myArray($t0)
-	
-	# increment the retrive index pos
-	addi $t1, $zero, 4
-	lw $t6, myArray($t1)
 	
 	# Clear $t0 as 0, note that addi is not add the value to the current number
 	addi $t0, $zero, 0
